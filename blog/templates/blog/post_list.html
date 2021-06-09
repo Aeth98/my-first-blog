@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Primo Blog</title>
 </head>
+<header>
+    <h1>Django Girls Blog</h1>
+</header>
 <body>
-
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date}}</p>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text }}</p>
+    </div>
+    {% endfor %}
 </body>
 </html>
